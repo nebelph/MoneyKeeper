@@ -17,7 +17,7 @@ std::map<std::string, unsigned> Day::info() const {
 	};
 	return temp;
 }
-void Day::update(Note* note) {
+void Day::update(std::shared_ptr<Note> note) {
 	m_sum = note->getSum();
 	m_food = note->getFood();
 	m_other = note->getOther();

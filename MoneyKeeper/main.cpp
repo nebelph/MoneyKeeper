@@ -5,22 +5,22 @@
 #include "utils.h"
 
 int main() {
-	Day* d0 = new Day(0);
-	d0->update(new Note(1000));
+	std::shared_ptr<Day> d0 = std::make_shared<Day>(0);
+	d0->update(std::make_shared<Note>(1000));
 	for (auto const& i : (*d0).info()) {
 		std::cout << i.first << " : " << i.second << ",\t";
 	}
 	std::cout << std::endl;
 
-	Day* d1 = new Day(1);
-	d1->update(new Note(1000, 500));
+	std::shared_ptr<Day> d1 = std::make_shared<Day>(1);
+	d1->update(std::make_shared<Note>(1000, 500));
 	for (auto const& i : (*d1).info()) {
 		std::cout << i.first << " : " << i.second << ",\t";
 	}
 	std::cout << std::endl;
 
-	Day* d2 = new Day(2);
-	d2->update(new Note(1000, 400, 600));
+	std::shared_ptr<Day> d2 = std::make_shared<Day>(2);
+	d2->update(std::make_shared<Note>(1000, 400, 600));
 	for (auto const& i : (*d2).info()) {
 		std::cout << i.first << " : " << i.second << ",\t";
 	}

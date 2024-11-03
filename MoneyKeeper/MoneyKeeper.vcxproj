@@ -132,11 +132,13 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="month.cpp" />
     <ClCompile Include="note.cpp" />
+    <ClCompile Include="utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="day.h" />
     <ClInclude Include="month.h" />
     <ClInclude Include="note.h" />
+    <ClInclude Include="utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

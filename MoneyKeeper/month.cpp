@@ -14,7 +14,7 @@ std::map<std::string, unsigned> Month::info() const {
 	};
 	return temp;
 }
-void Month::update(Day* day) {
+void Month::update(std::shared_ptr<Day> day) {
 	if (unsigned temp_day = day->getDay()) {
 		m_calendar.at(temp_day - 1) = day;
 		m_sum += day->getSum();
@@ -24,9 +24,4 @@ void Month::update(Day* day) {
 }
 unsigned Month::getMonth() const {
 	return m_month;
-}
-Month::~Month() {
-	for (int i = 0; i < 31; i++) {
-		delete m_calendar.at(i);
-	}
 }

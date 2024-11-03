@@ -6,7 +6,7 @@ class Day : public Note {
 public:
 	Day(unsigned);
 	std::map<std::string, unsigned> info() const override;
-	void update(Note*);
+	void update(std::shared_ptr<Note>);
 	unsigned getDay() const;
 };
 
