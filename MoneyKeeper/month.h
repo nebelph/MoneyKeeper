@@ -10,4 +10,3 @@ public:
 	void update(std::shared_ptr<Day>);
 	unsigned getMonth() const;
 };
-

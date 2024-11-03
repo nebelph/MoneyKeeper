@@ -4,8 +4,7 @@ Day::Day(unsigned day) {
 	if (day > 0 && day < 32)
 		m_day = day;
 	else {
-		std::cout << "day is invalid\n";
-		m_day = 0;
+		throw std::invalid_argument("received wrong day number");
 	}
 }
 std::map<std::string, unsigned> Day::info() const {
