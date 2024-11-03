@@ -2,6 +2,7 @@
 #include "note.h"
 #include "day.h"
 #include "month.h"
+#include "utils.h"
 
 int main() {
 	Day* d0 = new Day(0);
