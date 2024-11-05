@@ -14,7 +14,7 @@ int main() {
 		october->update(d0);
 	}
 	catch (std::exception& e) {
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl << std::endl;
 	}
 
 	std::shared_ptr<Note> note1 = std::make_shared<Note>(1000, 500);
